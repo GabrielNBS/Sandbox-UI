@@ -10,7 +10,6 @@
 		"clean": "powershell -Command \"Remove-Item -Recurse -Force .next\""
 	},
 	"dependencies": {
-		"@barba/core": "^2.10.3",
 		"@gsap/react": "^2.1.2",
 		"@react-three/drei": "^10.7.7",
 		"@react-three/fiber": "^9.6.1",

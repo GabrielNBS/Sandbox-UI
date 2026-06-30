@@ -6,7 +6,6 @@ import { motion } from 'framer-motion';
 import { Layout, ArrowLeft } from 'lucide-react';
 import Link from 'next/link';
 import { experiments } from '@/data/experiments';
-import { useSandbox } from '@/components/SandboxProvider';
 
 interface PageProps {
 	params: Promise<{ id: string }>;
@@ -14,7 +13,6 @@ interface PageProps {
 
 export default function ExperimentPage({ params }: PageProps) {
 	const { id } = use(params);
-	const { navigateWithTransition } = useSandbox();
 
 	const experiment = experiments.find((e) => e.id === id);
 
@@ -40,10 +38,6 @@ export default function ExperimentPage({ params }: PageProps) {
 					<div>
 						<Link
 							href="/"
-							onClick={(e) => {
-								e.preventDefault();
-								navigateWithTransition('/');
-							}}
 							className="inline-flex items-center gap-2 text-xs font-bold uppercase tracking-wider text-white/40 hover:text-white transition-colors group mb-4"
 						>
 							<ArrowLeft className="w-4 h-4 group-hover:-translate-x-1 transition-transform" />

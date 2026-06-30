@@ -4,7 +4,6 @@ import { type Variants, motion } from 'framer-motion';
 import { ArrowUpRight, Sparkles, Terminal } from 'lucide-react';
 import Link from 'next/link';
 import { experiments } from '@/data/experiments';
-import { useSandbox } from '@/components/SandboxProvider';
 
 const containerVariants: Variants = {
 	hidden: { opacity: 0 },
@@ -23,7 +22,6 @@ const itemVariants: Variants = {
 
 
 export default function Home() {
-	const { navigateWithTransition } = useSandbox();
 
 	return (
 		<div className="w-full max-w-6xl py-12 px-4 space-y-16">
@@ -79,14 +77,7 @@ export default function Home() {
 						whileHover={{ y: -6, transition: { duration: 0.2 } }}
 						className="group relative"
 					>
-						<Link
-							href={`/${exp.id}`}
-							onClick={(e) => {
-								e.preventDefault();
-								navigateWithTransition(`/${exp.id}`);
-							}}
-							className="block h-full"
-						>
+						<Link href={`/${exp.id}`} className="block h-full">
 							<div className="h-full glass rounded-[2rem] p-6 border border-white/5 hover:border-white/20 hover:bg-white/[0.03] transition-all flex flex-col justify-between group-hover:shadow-2xl group-hover:shadow-indigo-500/5">
 								<div>
 									<div className="flex items-center justify-between mb-6">
