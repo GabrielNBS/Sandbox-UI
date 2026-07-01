@@ -36,8 +36,8 @@ export default function GsapPlayground() {
 					marginLeft: '0px',
 					xPercent: -50,
 					yPercent: -50,
-					x: '50vw',
-					y: '50vh',
+					x: 0,
+					y: 0,
 					width: '380px',
 					height: '240px',
 					borderRadius: '24px',
@@ -56,8 +56,8 @@ export default function GsapPlayground() {
 					duration: 0.2,
 				})
 				.to(cube, {
-					x: '50vw',
-					y: '50vh',
+					x: 0,
+					y: 0,
 					width: '560px',
 					height: '70px',
 					borderRadius: '16px',
@@ -76,8 +76,8 @@ export default function GsapPlayground() {
 					duration: 0.2,
 				})
 				.to(cube, {
-					x: '50vw',
-					y: '50vh',
+					x: 0,
+					y: 0,
 					width: '300px',
 					height: '300px',
 					borderRadius: '2rem',
